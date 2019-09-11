@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('Segoe UI-Light.ttf');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Segoe UI-Semilight';
+    src: url('Segoe UI-Semilight.otf');
+    font-weight: lighter;
+    font-style: oblique;
+}
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('Segoe UI-Semibold.otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('Segoe UI-Light Italic.otf');
+    font-weight: lighter;
+    font-style: italic;
+}

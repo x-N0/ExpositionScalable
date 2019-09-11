@@ -8,8 +8,75 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-
+		<link rel="stylesheet" href="css/theme/dark.css">
+		<style>
+			section{
+				font-size: 1.15em;
+				color: rgb(239, 187, 53);
+			}
+			.resGrid{
+				display: grid;
+				place-content: center center;
+				grid-auto-flow: column;
+				grid-auto-rows: 1fr 1fr;
+				grid-gap: 0.1em;
+			}
+			.resCmpn{
+				width: 800px;
+				height: 650px;
+				justify-content: center;
+			}
+			.resCmpnt{
+				width: 600px;
+				height: 400px;
+				justify-self: center;
+				box-sizing: content-box;
+			}
+			.imgGrid{
+				display: grid;
+				grid-template-columns: 2fr 1fr 2fr;
+				justify-content: space-around;
+			}
+			.middle{
+				font-size: 5em;
+				display: flex;
+				justify-self: center;
+				place-items: center center;
+			}
+			.image-left{
+				position: relative;
+				justify-self: self-end;
+			}
+			.image-right{
+				position: relative;
+				justify-self: self-start;
+				
+			}
+			
+			/*Si/No/ Directions in the grid*/
+			.options{
+				display: grid;
+			}
+			#Si{
+				justify-self: flex-end;
+				position: absolute;
+			}
+			#No{
+				position: relative;
+				justify-self: flex-start;
+				
+			}
+			.bg{
+				font-size: 5em;
+			}
+			.b{
+				grid-column: 2;
+				justify-self: center;
+				text-align: center;
+				font-style: italic;
+				font-size: 1.2em;
+			}
+		</style>
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
 
@@ -25,8 +92,119 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<section data-markdown>
+							### Mi WebApp ¬Escalable
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							<!-- .slide: data-background="#ff9548" -->
+							## Mi WebApp NO Escalable...
+								Érase una vez la historia de un TeamDev que hicieron una WebApp empresarial...
+							<div class="imgGrid">
+								<ul class="image-left" style="grid-column: 1/2; padding-left: 15%;">
+									<li>Campaña de Marketing agresiva.</li>
+									<li>Sorteo de productos.</li>
+									<li>Email Marketing.</li>
+									<li>Telemarketing.</li>
+									<li>Un suceso alarmante.</li>
+								</ul>
+								<img class="image-right" style="grid-column: 3/3;" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn2.content.compendiumblog.com%2Fuploads%2Fuser%2Fb8982726-94bb-47a8-8b4f-4ecdce721333%2Fa6256eea-1dff-48de-aec6-7d7695b89906%2FImage%2Fccee2420f44137f77cc6faa7c2d579dd%2Fgraph_explaination_single_pa_300_clr_3152.gif&f=1&nofb=1" alt="rising graphic" width="600" height="450">
+								
+							</div>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+								<!-- .slide: data-background="#ff9548" -->
+								### Y esa WebApp se cayó porque no soportó.
+								<ul>
+									<span>Presencia en internet = <b>Dinero</b></span>
+									<li>Facebook pierde $6.3 millón por cada hora fuera de servicio.</li>
+									<li>Google Ads perdería medio millón de dólares en dos minutos.</li>
+									<li>Gmail perdería 80 millones de Gmails en dos minutos.</li>
+								</ul>
+								<br>
+								<b class="icon bg">⭛</b>
+								<br>
+								<b style="color: #FAE042; font-size: 4em;">404 not found</b>
+						</script>
+					</section>
+				</section>
+				<section>
+					<section>
+						<span class="pregunta">¿Sé de escalabilidad?</span>
+						<br>
+						<span>¿Usar escalabilidad?</span>
+						<div class="options">
+							<span id="No">No</span>
+							<span id="Si">Sí</span> 
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<div class="imgGrid">
+								<img class="image-left" src="https://66.media.tumblr.com/1c3d975ee28d11fced851a2c8c7100d2/tumblr_nckwralB6q1qhry52o1_400.gif" alt="Clifford the dog licking owner when was little." width="600" height="450">
+								<div class="middle"><b>⇝</b></div>
+								<img class="image-right" src="https://media0.giphy.com/media/12EEU1zfl4JkC4/giphy.gif" alt="Clifford the dog licking his owner in the big transformation." width="600" height="450">
+								<b class="b">Suplir la demanda.</b>
+						</div>
+					</section>
+					<section>
+						<div class="imgGrid">
+								<iframe class="image-left" data-src='https://thecollectibles.tumblr.com/' frameborder="0" width="800px" height="650px"></iframe>
+								<b class="middle" style="font-size: 1.05em;">WebApp <br>vs<br> WebSite</b>
+								<iframe class="image-right" data-src='http://intellisysdcorp.com/' frameborder="0" width="800px" height="650px"></iframe>
+						</div>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							<!-- .slide: data-background="#efb22e" -->
+							## Los puntos claves de una WebApp Escalable...
+							<ol>
+								<li>Mantenimiento del Código. (Cache-Aside, Event Sourcing, Index Table, Clean Code)</li>
+								<li>Seguimiento continuo de Analíticas y Flow Control. (Google Analytics, Spring Metrics, Woopra)</li>
+								<li>V-irtual P-rivate S-erver. (GoDaddy, DreamHost, HostGator, Linor)</li>
+								<li>Arquitectura Orientada a Servicios. (Desacoplado de Escritura y Lectura)</li>
+								<li>Eliminar toda redundancia o sobrecarga de procesos.</li>
+								<li>Procesamiento particionado: Vertical, Horizontal(+ Sistema Distibuido).</li>
+								<li>Balance de Carga. (Amazon EC2, GCP, Nginx{NodeJs})</li>
+								<li>Usar C-ontent D-elivery N-etwork para archivos estáticos. (MaxCDN, Amazon CloudFront, CloudFlare, Incapsula)</li>
+								<li>Sistemas de manejo de datos Asíncronos. (Await queries)</li>
+							</ol>
+						</script>					
+					</section>
+					<section>
+						<b>Servicios que se encargan automáticamente de la Escalabilidad.</b>
+						<div class="resGrid" style="background-color: #6DB65B; border-radius: 8px; margin: 2px 2px 2px 2px;">
+								<img class="resCmpnt" src="https://upload.wikimedia.org/wikipedia/commons/2/26/Logo-OVH.svg" alt="heroku">
+								<img class="resCmpnt" src="https://upload.wikimedia.org/wikipedia/commons/6/61/Google_Cloud_Logo.svg" alt="heroku">								
+								<img class="resCmpnt" style="width:" src="https://cdn.worldvectorlogo.com/logos/heroku.svg" alt="heroku">
+								<img class="resCmpnt" src="https://upload.wikimedia.org/wikipedia/en/a/a2/Cloudflare_logo.svg" alt="heroku">
+								<img class="resCmpnt" src="https://upload.wikimedia.org/wikipedia/en/2/26/Official_Linode_logo.svg">
+								<img class="resCmpnt" src="https://upload.wikimedia.org/wikipedia/commons/f/ff/DigitalOcean_logo.svg" alt="heroku">		
+						</div>	
+					</section>
+					<section>
+						<em>El siguiente paso es la nube... Y debes prepararte para ello.</em>
+						<div class="resGrid">
+							<iframe class="resCmpn" data-src="https://es.wikipedia.org/wiki/Stadia" width="800px" height="650px"></iframe>
+							<iframe class="resCmpn" data-src="https://es.wikipedia.org/wiki/Amazon_Web_Services" width="800px" height="650px"></iframe>
+						</div>
+					</section>
+					<section>
+						<b style="color: #4AAE9B">Escalabilidad de WebApps</b>
+						<br>
+						<em style="color: #4AAE9B">por Mí.</em>
+						<br>
+						<b style="color: #6DB65B">Es tu turno de investigar por tu cuenta más sobre escalabilidad. Este es sólo el comienzo...</p>
+						<div class="resGrid">
+							<b class="b" style="position: absolute; justify-self: flex-end; padding-top: 10%; padding-right: 10%; font-size: 2.5em;">←</b>
+							<iframe class="resCmpn" data-src="https://lmgtfy.com/?q=building+scalable+web+apps&iie=1" width="800px" height="650px"></iframe>
+						</div>
+					</section>
+				</section>
 			</div>
 		</div>
 
@@ -42,7 +220,22 @@
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
+				],
+				
+			// ...
+		
+			// The "normal" size of the presentation, aspect ratio will be preserved
+			// when the presentation is scaled to fit different resolutions. Can be
+			// specified using percentage units.
+			width: '150%',
+			height: '150%',
+		
+			// Factor of the display size that should remain empty around the content
+			margin: 0.1,
+		
+			// Bounds for smallest/largest possible scale to apply to content
+			minScale: 0.2,
+			maxScale: 1.5
 			});
 		</script>
 	</body>
