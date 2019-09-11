@@ -27,7 +27,7 @@ class Handler(webapp2.RequestHandler):
 
 class WebScalable(Handler):
     def get(self):
-        return self.render_str("./reveal.js/index.html")
+        return "hola"
 
 class WebScalable2(Handler):
     def get(self):
